@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="about.html">About</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Home Page Example</h2>
+  <p>Ran out of time..</p>
+</div>
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Bridge.jpg" style="width:50%">
+  <img class="mySlides" src="PictureRock.jpg" style="width:50%">
+  <img class="mySlides" src="Waterfall.jpg" style="width:50%">
+  <img class="mySlides" src="LightHouse.jpg" style="width:50%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
